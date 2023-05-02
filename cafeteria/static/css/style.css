@@ -1,0 +1,124 @@
+
+# <!----- Body Section ----->
+
+.nav-link:hover{ color: black; }
+
+body { padding-top: 80px; }
+
+.my-header{
+    text-align: center;
+    color: #22559c;
+    font-family: "Sigmar", cursive;
+    font-style: regular;
+    font-weight: 400;
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    }
+
+.grape {
+    padding-bottom: 2%;
+    }
+
+.eggplant {
+    width: 80%;
+    margin-top: 1%;
+    padding-top: 1%;
+    padding-left: 15%;
+    text-align: center;
+}
+
+.papaya{
+    object-fit:scale-down
+    width: 800px;
+    height: 700px;
+}
+
+.banana{
+    padding-bottom: 2px;
+    text-align: center;
+}
+
+.fresa{
+    width: 70%;
+    padding-left: 20%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+ }
+
+.melon{
+    width: 70%;
+    padding-left: 20%;
+    padding-bottom: 3%;
+    }
+
+.berry {
+    padding-left: 110px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    }
+
+.image-text { position: relative;}
+
+#.texto {
+#    position: absolute;
+#    padding-top: 25% ;
+#    padding-left: 33%;
+#}
+
+.icon_list{
+    padding-top: 5%;
+}
+
+#<!----- Card all_cafes ----->
+
+.coconut { padding-bottom: 15px; }
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+# <!----- Test Section ----->
+
+.content-section {
+  background: #ffffff;
+  padding: 15px 100px;
+  border: 0px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  margin-left: 70px;
+}
+
+.box {
+        padding-left: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding-bottom: 5%;
+      }
+
+img { max-width: 100%; }
+
+.image { flex-basis: 10%; }
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+# <!-----  Footer ----->
+
+.footer {
+      background-color: #84A9AC;
+      height: 150px;
+      width: 100%;
+      padding-top: 1%;
+    }
+
+
+#<!----- Register.html  Section ----->
+

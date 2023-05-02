@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+  <h2 class="banana text-wrap">List of Cafes</h2>
+  <div class="row-fluid" id="main">
+      {% for cafe in cafes %}
+      {% if loop.index0 % 3 == 0 %}
+      <div class="row berry coconut">
+      {% endif %}
+         <div class="col-lg-4 col-md-6 px-5">
+              <div class="card" style="min-width: 18rem; max-width: 20rem; margin-top: 15px;">
+                <img src="{{ cafe.img_url }}"  class="card-img-top"  alt="Cafe_image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ cafe.name }}</h5>
+                    <p class="card-text">Location: {{ cafe.location }}</p>
+                    <p class="card-text"><i class="bi bi-cup-hot-fill"></i>&nbsp; {{ cafe.coffee_price }}</p>
+                    <p class="card-text"><i class="bi bi-wifi"></i>
+                    {% if cafe.has_wifi  %}
+                      &nbsp;Yes
+                    {% else %}
+                      &nbsp;No
+                    {% endif %}
+                    </p>
+                    <p>🪑 Seats &nbsp;{{ cafe.seats }}</p>
+                 <div class="dropdown pt-2">
+                    <a href="{{ cafe.map_url }}" class="btn btn-success">Location Map</a>
+
+                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Adds On
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">🚻 Has Toilets</a>{% if cafe.has_toilet  %}
+                      &nbsp;Yes
+                    {% else %}
+                      &nbsp;No
+                    {% endif %}</li>
+                    <li><a class="dropdown-item" href="#">☎️ Can Take Calls</a>{% if cafe.can_take_calls  %}
+                      &nbsp;Yes
+                    {% else %}
+                      &nbsp;No
+                    {% endif %}</li>
+                    <li><a class="dropdown-item" href="#">🔌 Has Sockets</a>{% if cafe.has_sockets %}
+                      &nbsp;Yes
+                    {% else %}
+                      &nbsp;No
+                    {% endif %}</li>
+                    </ul>
+                 </div>
+            </div>
+         </div>
+     </div>
+
+      {% if loop.index0 % 3 == 2 or loop.last %}
+    </div>
+      {% endif %}
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
