@@ -1,22 +1,48 @@
 
-# <!----- Body Section ----->
+/* <!----- Body Section -----> */
 
 .nav-link:hover{ color: black; }
 
-body { padding-top: 80px; }
+body { padding-top: 57px; }
 
 .my-header{
-    text-align: center;
-    color: #22559c;
+    /* text-align: center;
+    color: #22559c; */
+    color: #DCE7E8;
     font-family: "Sigmar", cursive;
+    /* text-align: center; */
     font-style: regular;
     font-weight: 400;
     font-size: 60px;
-    position: absolute;
     left: 50%;
-    top: 60%;
+    top: 50%;
     transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    margin: 0;
     }
+
+.my-subtitle {
+    color: #DCE7E8;
+    font-family: "Sigmar", cursive;
+    font-weight: 300;
+    font-size: 22px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.home-hero.container-fluid,
+.home-hero .row {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
 .grape {
     padding-bottom: 2%;
@@ -31,9 +57,11 @@ body { padding-top: 80px; }
 }
 
 .papaya{
-    object-fit:scale-down
-    width: 800px;
-    height: 700px;
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .banana{
@@ -60,19 +88,19 @@ body { padding-top: 80px; }
     padding-bottom: 15px;
     }
 
-.image-text { position: relative;}
+.image-text { 
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
+    text-align: center;
+}
 
-#.texto {
-#    position: absolute;
-#    padding-top: 25% ;
-#    padding-left: 33%;
-#}
 
 .icon_list{
     padding-top: 5%;
 }
 
-#<!----- Card all_cafes ----->
+/* #<!----- Card all_cafes -----> */
 
 .coconut { padding-bottom: 15px; }
 
@@ -82,7 +110,7 @@ body { padding-top: 80px; }
     object-fit: cover;
 }
 
-# <!----- Test Section ----->
+/* <!----- Test Section -----> */
 
 .content-section {
   background: #ffffff;
@@ -101,7 +129,7 @@ body { padding-top: 80px; }
         padding-bottom: 5%;
       }
 
-img { max-width: 100%; }
+/* img { max-width: 100%; } */
 
 .image { flex-basis: 10%; }
 
@@ -110,7 +138,7 @@ img { max-width: 100%; }
   padding-left: 20px;
 }
 
-# <!-----  Footer ----->
+/* <!-----  Footer -----> */
 
 .footer {
       background-color: #84A9AC;
@@ -120,5 +148,29 @@ img { max-width: 100%; }
     }
 
 
-#<!----- Register.html  Section ----->
+/* <!----- Register.html  Section -----> */
 
+
+
+/* Mobile responsiveness for hero */
+@media (max-width: 768px) {
+
+    .image-text {
+        height: 55vh; /* reduce hero height on mobile */
+    }
+
+    .my-header {
+        font-size: 36px; /* smaller title */
+    }
+
+    .my-subtitle {
+        font-size: 16px; /* smaller subtitle */
+        margin-top: 6px;
+    }
+
+    .hero-text {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 10px; /* prevent text from touching edges */
+    }
+}
